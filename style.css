@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: blanchedalmond;
+    padding: 40px;
+    color: rgb(12, 26, 22);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container-principal{
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+}
+.table-container{
+    background-color: beige;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px black;
+    overflow: hidden;
+} 
+.table-header{
+    background: rgb(75, 221, 194);
+    color: azure;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.p-20{
+    padding: 20px;
+
+}
+.linha-form{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+
+}
+.grupo-input{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.grupo-input label{
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: rgb(32, 30, 26);
+}
+.grupo-input input,
+.grupo-input select{
+    padding: 12px;
+    border: 1px solid rgb(75, 221, 194);
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: .3s;
+}
+.grupo-input input:focus,
+.grupo-input select:focus{
+    border-color: blue;
+    box-shadow: 0 0 5px rosybrown;
+
+}
+
+.btn-add{
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background: rgb(143, 223, 221);
+    color: rgb(3, 2, 2);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+
+}
+
+.btn-add:hover{
+    background-color:rgb(25, 0, 253);
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px sandybrown;
+
+}
+thead th{
+    background-color: azure;
+    color: rgb(27, 30, 30);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+tbody tr:nth-child(even){
+    background: rgb(156, 156, 127);
+}
+
+tbody tr:hover{
+    background: rgb(165, 82, 82);
+    transition: 0.3s;
+}
+.status{
+    padding: 5px 10px;
+    border-radius: 20 px;
+    font-size: 0.rem;
+    font-weight: bold;
+}
+
+.status.em.estoque{
+    background-color: blueviolet;
+    color: bisque;
+}
+
+.status.baixo.estoque{
+    background-color: blue;
+    color: brown;
+}
+
+.status.esgotado{
+    background-color: aquamarine;
+    color: rgb(255, 185, 185);
+}
+
+.price{
+    font-weight: 600;
+    color: rgb(98, 98, 168);
+}
+
+@media (max-width: 768px){
+    .linha-form{
+        flex-direction:column;
+        gap: ´15px;
+    }
+    table,thead,tbody,th,td,tr{
+        display: block;
+    
+    }
+    thead{
+        display: none;
+    }
+    tr{margin-bottom: 15px; border: 1px solid rgb(160, 132, 132)}
+    td{
+        text-align: right;
+        position: relative;
+        padding-left:50px ;
+    }
+    td:before{
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+  
+
